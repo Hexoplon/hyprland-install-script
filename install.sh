@@ -263,9 +263,10 @@ cursor {
 echo \
 "
 # -----------------------------------------------------
-# Electron flickering fix
+# Flickering fix
 # -----------------------------------------------------
-source = ~/.config/hypr/conf/electron-flickering-fix.conf" >> ./config/hypr/hyprland.conf
+source = ~/.config/hypr/conf/electron-flickering-fix.conf
+source = ~/.config/hypr/conf/intellij-flickering-fix.conf" >> ./config/hypr/hyprland.conf
 fi
 
 echo \
