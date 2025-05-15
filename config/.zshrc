@@ -38,7 +38,7 @@ bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
 # History
-HISTSIZE=5000
+HISTSIZE=-1
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
@@ -91,7 +91,7 @@ alias c='clear'
 alias ll='ls -la'
 alias update='sudo pacman -Syyu;yay -Su'
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq);yay -Sc --noconfirm'
-
+alias pp='git pull --rebase && git push'
 # pacman unlock
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias rmpacmanlock="sudo rm /var/lib/pacman/db.lck"
@@ -101,12 +101,6 @@ alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacma
 alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist"
 alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pacman.d/mirrorlist"
-
-# Maven
-alias mvn-ci="mvn clean install"
-alias mvn-ci-sk="mvn clean install -DskipTests"
-alias mvn-it="mvn failsafe:integration-test"
-alias mvn-check-updates="mvn versions:display-property-updates"
 
 # neovim
 alias nvchad="NVIM_APPNAME=nvchad nvim"

@@ -157,12 +157,6 @@ if gum confirm "Do you need development setup?" ;then
   git config --global pull.ff only
   ssh-keygen
 
-  # java
-  echo -e "${GREEN}"
-  figlet "Java"
-  echo -e "${NONE}"
-  sudo pacman -Sy jre21-openjdk jdk21-openjdk maven --noconfirm
-  yay -S google-java-format --noconfirm
 
   # python
   echo -e "${GREEN}"
@@ -170,16 +164,12 @@ if gum confirm "Do you need development setup?" ;then
   echo -e "${NONE}"
   sudo pacman -Sy python-pip --noconfirm
 
-  # jetbrains
-  yay -S jetbrains-toolbox --noconfirm
-
   # node
   echo -e "${GREEN}"
   figlet "Node"
   echo -e "${NONE}"
-  yay -S nvm --noconfirm
-  source /usr/share/nvm/init-nvm.sh
-  nvm install --lts
+  yay -S fnm --noconfirm
+  fnm install --lts
 
   # docker
   echo -e "${GREEN}"
@@ -196,6 +186,12 @@ if gum confirm "Do you need development setup?" ;then
   echo -e "${NONE}"
   sudo pacman -Sy gnome-keyring --noconfirm
   yay -S visual-studio-code-bin --noconfirm
+
+  # cursor
+  echo -e "${GREEN}"
+  figlet "Cursor"
+  echo -e "${NONE}"
+  yay -S cursor-bin --noconfirm
 
   # rest client
   yay -S bruno-bin --noconfirm
@@ -220,11 +216,11 @@ echo -e "${GREEN}"
 figlet "GUI Apps"
 echo -e "${NONE}"
 sudo pacman -Sy okular feh gwenview mpv qbittorrent bitwarden qalculate-gtk veracrypt --noconfirm
-yay -S onlyoffice-bin brave-bin librewolf-bin zen-browser-bin ventoy-bin webcord --noconfirm
+yay -S onlyoffice-bin chromium --noconfirm
 
 # set default browser
 unset BROWSER
-xdg-settings set default-web-browser zen-browser.desktop
+xdg-settings set default-web-browser chromium.desktop
 
 # terminal utils
 echo -e "${GREEN}"
