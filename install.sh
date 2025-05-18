@@ -216,7 +216,7 @@ echo -e "${GREEN}"
 figlet "GUI Apps"
 echo -e "${NONE}"
 sudo pacman -Sy okular feh gwenview mpv qbittorrent bitwarden qalculate-gtk veracrypt --noconfirm
-yay -S onlyoffice-bin chromium --noconfirm
+yay -S onlyoffice-bin chromium seahorse --noconfirm
 
 # set default browser
 unset BROWSER
